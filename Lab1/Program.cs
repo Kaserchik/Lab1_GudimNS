@@ -10,7 +10,19 @@ namespace Lab1
 {
     internal class Program
     {
-        
+        class Mathtriangle(double a, double b, double c)
+        {
+            public double x_a = 0, y_a = 0, x_b = a, y_b = 0, x_c, y_c;
+
+            public void cordinationFind()
+            {
+                double cos_a = (Math.Pow(b, 2) + Math.Pow(c, 2) - Math.Pow(a, 2)) / (2 * b * c);
+                double sin_a = Math.Sqrt(1 - Math.Pow(cos_a, 2));
+                x_c = cos_a * a;
+                y_c = sin_a * b;
+            }
+            
+        }
 
         static void Main()
         {
@@ -19,12 +31,19 @@ namespace Lab1
                 List<string> list = new List<string>();
                 try
                 {
+
                     Console.Write("Введите длину стороны A: ");
                     double sideA = Convert.ToDouble(Console.ReadLine());
                     Console.Write("Введите длину стороны B: ");
                     double sideB = Convert.ToDouble(Console.ReadLine());
                     Console.Write("Введите длину стороны C: ");
                     double sideC = Convert.ToDouble(Console.ReadLine());
+                    Mathtriangle mt = new Mathtriangle(sideA, sideB, sideC);
+                    mt.cordinationFind();
+                    list.Add(mt.x_a + " , " + mt.y_a);
+                    list.Add(mt.x_b + " , " + mt.y_b);
+                    list.Add(mt.x_c + " , " + mt.y_c);
+                    Console.WriteLine("___________________________________________");
                     Console.WriteLine("Координаты A: {0}\nКоординаты B: {1}\nКоординаты C: {2}", list[0], list[1], list[2]);
                     Console.WriteLine("___________________________________________");
                 }
