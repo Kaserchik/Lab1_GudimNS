@@ -1,0 +1,8 @@
+D:\study\VOR\Lab1_GudimNS\Lab1\bin\Debug\Lab1.exe.config
+D:\study\VOR\Lab1_GudimNS\Lab1\bin\Debug\Lab1.exe
+D:\study\VOR\Lab1_GudimNS\Lab1\bin\Debug\Lab1.pdb
+D:\study\VOR\Lab1_GudimNS\Lab1\obj\Debug\Lab1.csproj.AssemblyReference.cache
+D:\study\VOR\Lab1_GudimNS\Lab1\obj\Debug\Lab1.csproj.SuggestedBindingRedirects.cache
+D:\study\VOR\Lab1_GudimNS\Lab1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
+D:\study\VOR\Lab1_GudimNS\Lab1\obj\Debug\Lab1.exe
+D:\study\VOR\Lab1_GudimNS\Lab1\obj\Debug\Lab1.pdb
