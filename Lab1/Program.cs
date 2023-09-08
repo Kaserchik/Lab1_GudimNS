@@ -13,6 +13,7 @@ namespace Lab1
         class Mathtriangle(double a, double b, double c)
         {
             public double x_a = 0, y_a = 0, x_b = a, y_b = 0, x_c, y_c;
+            public string triangleResult;
 
             public void cordinationFind()
             {
@@ -21,7 +22,28 @@ namespace Lab1
                 x_c = cos_a * a;
                 y_c = sin_a * b;
             }
-            
+            public void reusltFind()
+            {
+                if ((a == b) && (b == c))
+                {
+                    triangleResult = "Треугольник: равносторонний";
+                }
+                else if (((a==b)&&(a!=c))||((a==c)&&(a!=b)))
+                {
+                    triangleResult = "Треугольник: равнобедренный";
+                }
+                else
+                {
+                    if ((a >= b + c) || (b >= a + c) || (c >= a + b))
+                    {
+                        triangleResult = "Треугольник: это не треугольник";
+                    }
+                    else
+                    {
+                        triangleResult = "Треугольник: разносторонний треугольник";
+                    }
+                }
+            }
         }
 
         static void Main()
@@ -40,10 +62,12 @@ namespace Lab1
                     double sideC = Convert.ToDouble(Console.ReadLine());
                     Mathtriangle mt = new Mathtriangle(sideA, sideB, sideC);
                     mt.cordinationFind();
+                    mt.reusltFind();
                     list.Add(mt.x_a + " , " + mt.y_a);
                     list.Add(mt.x_b + " , " + mt.y_b);
                     list.Add(mt.x_c + " , " + mt.y_c);
                     Console.WriteLine("___________________________________________");
+                    Console.WriteLine(mt.triangleResult);
                     Console.WriteLine("Координаты A: {0}\nКоординаты B: {1}\nКоординаты C: {2}", list[0], list[1], list[2]);
                     Console.WriteLine("___________________________________________");
                 }
