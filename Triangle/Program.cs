@@ -19,12 +19,12 @@ namespace Triangle
                 .WriteTo.File("logs/file_.txt", outputTemplate: template)
                 .CreateLogger();
 
+            string a = "3";
+            string b = "4";
+            string c = "5";
             Mathtriangle mathtriangle = new Mathtriangle();
-            string a = "2";
-            string b = "2";
-            string c = "26";
             mathtriangle.Start(a, b, c);
-
+            Console.ReadKey();
             Log.CloseAndFlush();
         }
     }
